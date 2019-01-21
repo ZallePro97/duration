@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="number" class="form-control" ng-model="milisecondsDir">
+      <span class="input-group-btn">
+        <button class="btn btn-default" disabled>ms</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<br />
+<br />
+
+<div class="row">
+  <div class="col-lg-3">
+    <div class="input-group">
+      <input type="number" class="form-control" ng-model="hours">
+        <span class="input-group-btn">
+        <button class="btn btn-default" disabled>h</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-3">
+    <div class="input-group">
+      <input type="number" class="form-control" ng-model="minutes" min="0">
+        <span class="input-group-btn">
+        <button class="btn btn-default" disabled>m</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+<br />
+
+<p ng-show="milisecondsDir >= 60000">Hours: {{ calcHours() }}, minutes: {{ calcMinutes() }}</p>
